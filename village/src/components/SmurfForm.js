@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import '../App.css';
 
 class SmurfForm extends Component {
   constructor(props) {
@@ -42,24 +43,29 @@ class SmurfForm extends Component {
       <div className="SmurfForm">
         <form onSubmit={this.addSmurf}>
           <input
+            className="forms"
             onChange={this.handleInputChange}
             placeholder="Name"
             value={this.state.name}
             name="name"
           />
           <input
+            className="forms"
             onChange={this.handleInputChange}
             placeholder="Age"
             value={this.state.age}
             name="age"
           />
           <input
+            className="forms"
             onChange={this.handleInputChange}
             placeholder="Height"
             value={this.state.height}
             name="height"
           />
-          <button type="submit">Add to the village</button>
+          <div>
+          <button type="submit" className="button">Add to the village</button>
+          </div>
         </form>
       </div>
     );
