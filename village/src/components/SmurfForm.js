@@ -21,10 +21,10 @@ class SmurfForm extends Component {
         height: this.state.height
       })
       .then(res => {
-        this.setState(() => ({...this.state.smurfs, newSmurf }))
+        this.setState(obj => ({...this.state.smurfs, newSmurf }))
+      })
       .catch(err => {
         console.log('Error', err)
-      })
       })
     this.setState({
       name: '',
