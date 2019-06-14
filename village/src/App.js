@@ -40,7 +40,7 @@ class App extends Component {
     return (
       <div className="App">
         <Home />
-        <Route path="/smurf-form" component= {SmurfForm} />
+        <Route exact path="/smurf-form" component= {SmurfForm} />
         <Smurfs 
         Route exact path ="/"
         smurfs={this.state.smurfs} />
