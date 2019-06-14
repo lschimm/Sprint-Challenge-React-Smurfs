@@ -44,7 +44,6 @@ class App extends Component {
         <Smurfs 
         Route exact path ="/"
         smurfs={this.state.smurfs} />
-        
         {/* <Route exact path="/" /> */}
       </div>
     );
