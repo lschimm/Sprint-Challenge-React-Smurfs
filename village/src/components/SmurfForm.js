@@ -13,6 +13,7 @@ class SmurfForm extends Component {
 
   addSmurf = event => {
     event.preventDefault();
+    const newSmurf ={ name: this.state.smurfs }
     axios
       .post('http://localhost:3333/smurfs', {
         name: this.state.name,
@@ -20,7 +21,7 @@ class SmurfForm extends Component {
         height: this.state.height
       })
       .then(res => {
-        this.setState(() => ({ smurfs: res.data }))
+        this.setState(() => ({...this.state.smurfs, newSmurf }))
       .catch(err => {
         console.log('Error', err)
       })
